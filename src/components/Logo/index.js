@@ -3,8 +3,8 @@ import logo from '../../images/logo.svg';
 
 const LogoContainer = styled.div`
   display: flex;
-  font-size: 30px;
-  align-items: center;
+  font-size: 2rem; // 30px
+  /* align-items: center; */
 `
 
 const LogoImage = styled.img`
@@ -16,7 +16,7 @@ const LogoImage = styled.img`
 function Logo() {
   return (
     <LogoContainer>
-      <img src={logo} alt="logo" className="logo-img" />
+      <LogoImage src={logo} alt="logo" />
       <p>
         <b>Books</b>4You
       </p>

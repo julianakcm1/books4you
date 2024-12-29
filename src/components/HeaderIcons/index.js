@@ -2,12 +2,10 @@ import styled from 'styled-components';
 import perfil from '../../images/perfil.svg';
 import sacola from '../../images/sacola.svg';
 
-const iconsAux = [perfil, sacola];
-
 const Icon = styled.li`
-  margin-right: 3rem;
-  width: 0.5rem;
-`
+  margin-right: 3rem; // 40px
+  width: 0.5rem; // 25px
+  `
 
 const Icons = styled.ul`
   display: flex;
@@ -15,10 +13,12 @@ const Icons = styled.ul`
   /* gap: 0.5rem; */
 `
 
+  const icons = [perfil, sacola];
+
 function HeaderIcons() {
   return (
     <Icons>
-      {iconsAux.map((icon) => (
+      {icons.map((icon) => (
         <Icon>
           <img src={icon}></img>
         </Icon>

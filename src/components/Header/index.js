@@ -7,8 +7,9 @@ const HeaderContainer = styled.div`
   background-color: #fcfcfc;
   /* padding: 0 1rem; */
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  /* justify-content: space-around; */
+  /* align-items: center; */
 `
 
 function Header() {
