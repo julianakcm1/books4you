@@ -20,7 +20,7 @@ function HeaderIcons() {
     <Icons>
       {icons.map((icon) => (
         <Icon>
-          <img src={icon}></img>
+          <img src={icon} />
         </Icon>
       ))}
     </Icons>

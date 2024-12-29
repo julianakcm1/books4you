@@ -12,7 +12,7 @@ const Option = styled.li`
   cursor: pointer;
   min-width: 7.5rem; // 120px
   font-size: 1rem; // 16px
-  padding: 0.5rem; // 0 5px
+  /* padding: 0.5rem; // 0 5px */
   `
 
 const Options = styled.ul`

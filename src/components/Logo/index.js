@@ -4,13 +4,10 @@ import logo from '../../images/logo.svg';
 const LogoContainer = styled.div`
   display: flex;
   font-size: 2rem; // 30px
-  /* align-items: center; */
 `
 
 const LogoImage = styled.img`
   margin-right: 10px;
-  width: 2rem;
-  height: 2rem;
 `
 
 function Logo() {
