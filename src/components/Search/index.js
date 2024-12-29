@@ -26,10 +26,10 @@ const Subtitle = styled.h3`
 function Search() {
   return (
     <SearchContainer>
-      <Title>Já sabe por onde começar?</Title>
-      <Subtitle>Encontre o seu livro na estante</Subtitle>
+      <Title>Do you already know where to start?</Title>
+      <Subtitle>Find your book on the virtual bookshelf</Subtitle>
       <Input 
-        placeholder="Escreva a sua próxima leitura"
+        placeholder="Write your next reading"
       />
     </SearchContainer>
   )

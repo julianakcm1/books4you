@@ -19,7 +19,7 @@ const Options = styled.ul`
   display: flex;
   `
 
-const textOptions = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE'];
+const textOptions = ['CATEGORIES', 'FAVORITES', 'MY SHELF'];
 
 function HeaderOptions() {
   return (
