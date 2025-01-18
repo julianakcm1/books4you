@@ -1,4 +1,4 @@
-import book from '../../images/book.jpg'
+import book from '../../images/book.png'
 
 export const books = [
   { name: 'Atomic Habits', id: 1, src: book },
