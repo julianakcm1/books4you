@@ -14,11 +14,10 @@ function Favorites() {
   async function fetchFavorites() {
     const APIfavorites = await getFavorites()
     setFavorites(APIfavorites)
-
   }
 
   useEffect( () => {
-    fetchFavoritesFavorites([])
+    fetchFavorites([])
   }, [])
 
   return (
