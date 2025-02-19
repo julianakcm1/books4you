@@ -8,11 +8,11 @@ async function getFavorites() {
     return response.data
 }
 
-async function postFavorite() {
+async function postFavorite(id) {
     await APIFavorites.post(`/${id}`)
 }
 
-async function deleteFavorite() {
+async function deleteFavorite(id) {
     await APIFavorites.delete(`/${id}`)
 }
 
