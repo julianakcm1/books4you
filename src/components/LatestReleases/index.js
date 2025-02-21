@@ -29,8 +29,8 @@ function LatestReleases() {
         Latest Releases
       </Title>
       <NewBooksContainer>
-        { books.map( book => (
-          <img src={book.src} alt="" />
+        { books.map( (book, index) => (
+          <img key={index} src={book.src} alt={`Book ${index}`} />
         ) )}
       </NewBooksContainer>
       <RecommendationCard 

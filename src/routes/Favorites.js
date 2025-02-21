@@ -10,45 +10,49 @@ const AppContainer = styled.div`
 `;
 
 const ResultContainer = styled.div`
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `
 
 const Result = styled.div`
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin: 20px 0;
-   cursor: pointer;
-   text-align: center;
-   padding: 0 100px;
-   p {
-       width: 200px;
-       color: #FFF;
-   }
-   img {
-       width: 100px;
-   }
-   &:hover {
-       border: 1px solid white;
-   }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  cursor: pointer;
+  text-align: center;
+  padding: 0 100px;
+  p {
+      width: 200px;
+      color: #FFF;
+  }
+  img {
+      width: 100px;
+  }
+  &:hover {
+      border: 1px solid white;
+  }
 `
 
 const Title = styled.h2`
-   color: #FFF;
-   font-size: 36px;
-   text-align: center;
-   width: 100%;
-   padding-top: 35px
+  color: #FFF;
+  font-size: 36px;
+  text-align: center;
+  width: 100%;
+  padding-top: 35px
 `
 
 function Favorites() {
   const [favorites, setFavorites] = useState([])
 
+  useEffect( () => {
+    fetchFavorites()
+  }, [])
+
   async function fetchFavorites() {
-    const APIfavorites = await getFavorites()
-    setFavorites(APIfavorites)
+    const response = await getFavorites()
+    setFavorites(response)
   }
 
   async function deleteFavoriteBook(id) {
@@ -57,23 +61,21 @@ function Favorites() {
     alert(`Book id:${id} was deleted!`)
   }
 
-  useEffect( () => {
-    fetchFavorites([])
-  }, [])
-
   return (
     <AppContainer>
-      <Title>Here are your favorite books:</Title>
-      <ResultContainer>
-        {
-          favorites.length !== 0 ? favorites.map(favorite => (
-            <Result onClick={() => deleteFavoriteBook(favorite.id)}>
-            <img src={bookImg} alt='' />
-              <p>{favorite.nome}</p>
-            </Result>
-          )) : null
-        }
-      </ResultContainer>
+      <div>
+        <Title>Here are your favorite books:</Title>
+        <ResultContainer>
+          {
+            favorites.length !== 0 ? favorites.map(favorite => (
+              <Result onClick={() => deleteFavoriteBook(favorite.id)}>
+              <img src={bookImg} alt='' />
+                <p>{favorite.nome}</p>
+              </Result>
+            )) : null
+          }
+        </ResultContainer>
+      </div>
     </AppContainer>
   );
 }

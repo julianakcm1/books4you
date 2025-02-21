@@ -6,6 +6,6 @@ export const Title = styled.h2`
   background-color: #FFF;
   color: ${props => props.color || '#000'};
   font-size: ${props => props.fontSize || '1rem'};
-  text-align: ${props => props.textAlign || 'center'};
+  text-align: ${props => props.align || 'center'};
   margin: 0;
 `

@@ -72,7 +72,7 @@ function Search() {
         placeholder="Write your next reading"
         onBlur={event => {
           const typedText = event.target.value;
-          const searchResult = books.filter(book => book.name.includes(typedText));
+          const searchResult = books.filter(book => book.name?.includes(typedText));
           setSearchedBooks(searchResult);
         }}
       />

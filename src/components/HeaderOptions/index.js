@@ -30,10 +30,8 @@ const textOptions = ['CATEGORIES', 'FAVORITES', 'SHELF'];
 function HeaderOptions() {
   return (
     <Options>
-      {textOptions.map((text) => (
-        <Option>
-          <Link to={`/${text.toLowerCase()}`}><p>{text}</p></Link>
-        </Option>
+      {textOptions.map((text, index) => (
+        <Link key={index} to={`/${text.toLowerCase()}`}><Option><p>{text}</p></Option></Link>
       ))}
     </Options>
   );
